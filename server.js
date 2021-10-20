@@ -23,5 +23,7 @@ function handlePerson(request, response) {
 
 module.exports = {
   server: app,
-  start: () => app.listen(3000, () => console.log('Server is up')),
+  start: port => {
+    app.listen(port, () => console.log('Server is up')), port;
+  },
 };
