@@ -8,6 +8,8 @@ const validator = require('./middleware/validator.js');
 const handle404 = require('./error-handlers/404.js');
 const handle500 = require('./error-handlers/500.js');
 
+const { food, clothes } = require('./model');
+
 app.use(express.json());
 app.use(logger);
 app.use(validator);
