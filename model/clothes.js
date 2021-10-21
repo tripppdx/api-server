@@ -1,8 +1,8 @@
-"use strict";
+'use strict';
 
 const Clothes = (sequelize, DataTypes) =>
-  sequelize.define("Clothes", {
-    words: {
+  sequelize.define('Clothes', {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
