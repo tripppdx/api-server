@@ -9,8 +9,7 @@ const ClothesModel = require('./clothes.js');
 let DATABASE_URL = process.env.DATABASE_URL || 'sqlite:memory';
 
 // sqliteDatbase = sqlite:memory
-// postgresDatabase = 'postgresql://localhost:5432/talk';
-// for folks the need permissions: `postgresql://username:pass@localhost:5432/db-name
+// postgresDatabase = 'postgresql://localhost:5432/lab03';
 
 const options =
   process.env.NODE_ENV === 'production'
