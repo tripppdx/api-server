@@ -11,13 +11,8 @@ router.post('/', createFood);
 router.put('/:id', updateFood);
 router.delete('/:id', deleteFood);
 
-// start writing our route handlers!
-// what's the first we want this function to do?
 async function getOneFood(request, response) {
-  // perfrom our CRUD
-
   const id = request.params.id;
-  // how do we get our Food from the DB
   const foundFood = await food.findByPk(parseInt(id));
   response.status(200);
   response.send(foundFood);
@@ -29,8 +24,6 @@ async function getAllFood(request, response, next) {
     response.status(200);
     response.send(foundAllFood);
   } catch (e) {
-    // response.status(500);
-    // response.send(e);
     next(e);
   }
 }
@@ -51,7 +44,6 @@ async function createFood(request, response, next) {
 
 async function updateFood(request, response, next) {
   try {
-    // does this actually update?
     const id = parseInt(request.params.id);
 
     const foundFood = await food.findByPk(id);
@@ -66,10 +58,7 @@ async function updateFood(request, response, next) {
 
 async function deleteFood(req, res, next) {
   try {
-    // this will return an instance of the clothing model (which has its owne methods)
-    // const foundFood = await food.findById();
     const id = parseInt(req.params.id);
-
     const foundFood = await food.findByPk(id);
     const deletedFood = await foundFood.destroy(req.body);
     res.status(200);

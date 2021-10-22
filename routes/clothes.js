@@ -51,14 +51,11 @@ async function createClothes(request, response, next) {
 
 async function updateClothes(request, response, next) {
   try {
-    // does this actually update?
-    const updatedClothes = await clothes.update(
-      {
-        name: request.body.name,
-        size: request.body.size,
-      },
-      { where: { id: request.params.id } }
-    );
+    const id = parseInt(request.params.id);
+
+    const foundClothes = await clothes.findByPk(id);
+
+    const updatedClothes = await foundClothes.update(request.body);
 
     response.status(200);
     response.send(updatedClothes);
@@ -69,11 +66,9 @@ async function updateClothes(request, response, next) {
 
 async function deleteClothes(req, res, next) {
   try {
-    // this will return an instance of the clothing model (which has its owne methods)
-    // const foundClothes = await clothes.findById();
-    const deletedClothes = await clothes.destroy({
-      where: { id: req.params.id },
-    }); // returns the number rows deleted
+    const id = parseInt(req.params.id);
+    const foundClothes = await clothes.findByPk(id);
+    const deletedClothes = await foundClothes.destroy(req.body);
     res.status(200);
     res.send(deletedClothes);
   } catch (e) {
