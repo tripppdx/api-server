@@ -13,9 +13,9 @@ Created by Harvey Lucas
 
 ### Lab: Class 04
 
-Dynamic API Add Database Abstraction and Associations to your API
+#### Dynamic API Add Database Abstraction and Associations to your API
 
-Build a REST API using Express, by creating a proper series of endpoints that perform CRUD operations on a database, using the REST standard
+Add a Collection Interface which will consume a Sequelize Model and perform generic Database CRUD operations.
 
 ## Links to application deployment
 
