@@ -1,4 +1,4 @@
-# basic-api-server
+# api-server
 
 Created by Harvey Lucas
 
@@ -11,17 +11,19 @@ Created by Harvey Lucas
 
 ## Summary of Problem Domain
 
-### Lab: Class 03
+### Lab: Class 04
+
+Dynamic API Add Database Abstraction and Associations to your API
 
 Build a REST API using Express, by creating a proper series of endpoints that perform CRUD operations on a database, using the REST standard
 
 ## Links to application deployment
 
-Heroku main branch deploy: https://tripppdx-basic-api-server.herokuapp.com/
+Heroku main branch deploy: https://tripppdx-api-server.herokuapp.com/
 
 ## Visual
 
-![WRRC](./public/basic-api-server.png)
+![WRRC](./public/api-server.png)
 
 ## Routes
 
